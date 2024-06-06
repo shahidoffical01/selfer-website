@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Libre+Baskerville:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    height: 100vh;
+    background-image: url(../images/header-bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 222;
+}
+
+header .navbar .navbar-brand {
+    position: absolute;
+    top: 18px;
+    left: 0;
+}
+
+header .navbar .navbar-brand img {
+    width: 64px;
+    height: 64px;
+}
+
+header .navbar .navbar-nav .nav-item .nav-link {
+    color: rgb(142, 142, 142);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .3px;
+    position: relative;
+    transition: all ease .4s;
+}
+
+header .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: black;
+    transition: all ease .4s;
+}
+
+header .navbar .navbar-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(242, 108, 79);
+    opacity: 0;
+    transition: all ease .4s;
+}
+
+header .navbar .navbar-nav .nav-item .nav-link:hover::after {
+    opacity: 1;
+    transition: all ease .4s;
+}
+
+.navbar>.container {
+    justify-content: end !important;
+}
+
+/* content */
+
+header .content {
+    padding: 200px 0px 0px 0px;
+    position: relative;
+}
+
+header .content .icon-grp {
+    margin-bottom: 30px;
+}
+
+header .content .icon-grp i {
+    color: rgb(142, 142, 142);
+    font-size: 20px;
+    
+}
+header .content h1 {
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+}
+
+header .content h1::after {
+    content: "Photographer";
+    color: #fff;
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    font-size: 40px;
+    border: 3px solid white;
+    padding: 20px;
+}
+
+@keyframes anima {
+
+    0% {
+        content: "Photographer";
+    }
+
+    25% {
+        content: "Designer";
+    }
+
+    50% {
+        content: "Creative Person";
+    }
+
+    75% {
+        content: "Writer";
+    }
+
+    100% {
+        content: "Photographer";
+    }
+
+}
+
+header .content .down {
+    position: absolute;
+    bottom: -350px;
+    overflow: hidden;
+}
+
+header .content .down a .arr {
+    font-size: 20px;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(242, 108, 79);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .5s;
+}
+
+header .content .down a .arr-d {
+    font-size: 20px;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .5s;
+    position: absolute;
+    top: 0;
+    z-index: 111;
+    transform: translateX(-70px);
+}
+
+header .content .down:hover a .arr {
+    transform: translateX(70px);
+    transition: all ease .5s;
+}
+
+header .content .down:hover a .arr-d {
+    transform: translateX(0px);
+    transition: all ease .5s;
+}
+
+/* section-1 */
+.sec1 {
+    padding: 100px 0px;
+}
+
+.sec1 .services {
+    margin-bottom: 70px;
+}
+
+.sec1 .cards-wrapper .card i {
+    color: rgb(242, 108, 79);
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.sec1 .cards-wrapper .card .name {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+}
+
+.sec1 .cards-wrapper .card .para {
+    color: #7d7d7d;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    font-weight: 500;
+}
+
+.sec1 .cards-wrapper .card .ancor {
+    width: 30%;
+
+}
+
+.sec1 .cards-wrapper .card .ancor a {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    transform: translateX(-110px);
+    display: block;
+    transition: all ease .5s;
+}
+
+.sec1 .cards-wrapper .card .ancor:hover a {
+    transform: translateX(0px);
+    transition: all ease .5s;
+}
+
+.sec1 .cards-wrapper .card .ancor a::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: rgb(242, 108, 79);
+    position: absolute;
+    top: 8px;
+    right: -20px;
+}
+
+.sec1 .cards-wrapper .card:nth-child(1),
+.sec1 .cards-wrapper .card:nth-child(2),
+.sec1 .cards-wrapper .card:nth-child(3) {
+    margin-bottom: 70px;
+}
+
+
+/* section-3 */
+.sec3 {
+    padding: 100px 0px;
+}
+
+.sec3 .first {
+    margin-bottom: 100px;
+}
+
+.sec3 .about {
+    padding-left: 100px;
+}
+
+.sec3 .about .hi {
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    border: 3.5px solid #fff;
+    padding: 20px;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+/* .sec3 .about .hi span {
+    width: 10px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    transform: skew(35deg) rotate(-290deg);
+    left: 20px;
+    bottom: -10px;
+
+
+} */
+
+.sec3 .about .para {
+    color: #7d7d7d;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.sec3 .about .contact .name-phone {
+    margin-right: 180px;
+}
+
+.sec3 .about .contact .name-phone .name,
+.sec3 .about .contact .name-phone .phone,
+.sec3 .about .contact .email-twitter .email,
+.sec3 .about .contact .email-twitter .twitter {
+    color: white;
+}
+
+.sec3 .about .contact .name-phone .name span,
+.sec3 .about .contact .name-phone .phone span,
+.sec3 .about .contact .email-twitter .email span,
+.sec3 .about .contact .email-twitter .twitter span {
+    font-weight: 600;
+    color: rgb(242, 108, 79);
+}
+
+.sec3 .about .contact .name-phone .name,
+.sec3 .about .contact .email-twitter .email {
+    margin-bottom: 30px;
+}
+
+/* btn1 */
+.sec3 .about .buttons .btn1 {
+    width: fit-content;
+    height: max-content;
+}
+
+.sec3 .about .buttons .btn1 .a1 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(242, 108, 79);
+    padding: 15px 25px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease .7s;
+}
+
+.sec3 .about .buttons .btn1 .a2 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(206, 96, 71);
+    padding: 15px 25px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    transform: translateX(-165px);
+    transition: all ease .7s;
+}
+
+.sec3 .about .buttons .btn1 .a1 i,
+.sec3 .about .buttons .btn1 .a2 i {
+    font-size: 13px;
+}
+
+.sec3 .about .buttons .btn1:hover .a2 {
+    transform: translateX(0px);
+    transition: all ease .3s;
+}
+
+.sec3 .about .buttons .btn1:hover .a1 {
+    transform: translateX(165px);
+    transition: all ease .3s;
+}
+
+/* btn2 */
+
+.sec3 .about .buttons .btn2 {
+    width: fit-content;
+    height: max-content;
+}
+
+.sec3 .about .buttons .btn2 .a1 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid white;
+    padding: 14px 25px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease .3s;
+}
+
+.sec3 .about .buttons .btn2 .a2 {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 14px 25px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    transform: translateX(-175px);
+    transition: all ease .3s;
+}
+
+.sec3 .about .buttons .btn2 .a1 i,
+.sec3 .about .buttons .btn2 .a2 i {
+    font-size: 13px;
+}
+
+.sec3 .about .buttons .btn2:hover .a2 {
+    transform: translateX(0px);
+    transition: all ease .3s;
+}
+
+.sec3 .about .buttons .btn2:hover .a1 {
+    transform: translateX(175px);
+    opacity: 0;
+    transition: all ease .7s;
+}
+
+
+
+
+
+
+/* section-4 */
+
+.sec4 {
+    padding: 50px 0px 100px 0px;
+}
+
+.sec4 .work {
+    background-image: url(../images/bg-keyboard.jpg);
+    height: 170px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sec4 .work .box .hire {
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.sec4 .work .box {
+    background-color: rgb(242, 108, 79);
+    padding: 13px 20px;
+    bottom: -20px;
+    z-index: 11;
+}
+
+.sec4 .work .box span {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(242, 108, 79);
+    transform: rotate(50deg);
+    position: relative;
+    top: 20px;
+    right: 100px;
+}
+
+
+
+/* section-5 */
+.sec5 {
+    padding: 100px 0px;
+}
+
+
+.sec5 .skill {
+    margin-bottom: 70px;
+}
+
+.sec5 .text-content .heading {
+    color: #fff;
+    font-size: 25px;
+}
+
+.sec5 .text-content .para1,
+.sec5 .text-content .para2 {
+    color: #7c7c7c;
+    font-weight: 500;
+}
+
+.sec5 .text-content .btn1 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: 2px solid white;
+    display: block;
+    width: fit-content;
+    margin-top: 30px;
+    transition: all ease .3s;
+}
+
+.sec5 .text-content .btn1:hover {
+    color: #000;
+    transition: all ease .3s;
+    background-color: white;
+}
+
+/* ---- */
+
+.sec5 .prog .pro1 .bar .inner {
+    width: 600px;
+    height: 4px;
+    background-color: rgb(242, 108, 79);
+    position: relative;
+    animation: inner1 3s 1 linear forwards;
+}
+
+
+.sec5 .prog .pro1 .bar span {
+    color: #333;
+    float: right;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 10px 18px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    position: absolute;
+    right: -20px;
+    top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+@keyframes inner1 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 22.5%;
+    }
+
+    50% {
+        width: 45%;
+    }
+
+    75% {
+        width: 67.5%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.sec5 .prog .pro1:nth-child(2) .bar .inner {
+    animation: inner2 3s 1 linear forwards;
+}
+
+
+@keyframes inner2 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 15%;
+    }
+
+    50% {
+        width: 30%;
+    }
+
+    75% {
+        width: 45%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+.sec5 .prog .pro1:nth-child(3) .bar .inner {
+    animation: inner3 3s 1 linear forwards;
+}
+
+@keyframes inner3 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 20%;
+    }
+
+    50% {
+        width: 40%;
+    }
+
+    75% {
+        width: 60%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+.sec5 .prog .pro1:nth-child(4) .bar .inner {
+    animation: inner4 3s 1 linear forwards;
+}
+
+@keyframes inner4 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 12.5%;
+    }
+
+    50% {
+        width: 25%;
+    }
+
+    75% {
+        width: 37.5%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+/* section-2 */
+.sec2 {
+    padding: 100px 0px}
+
+
+/* section-6 */
+.sec6 {
+    padding: 100px 0px;
+    background-image: url(../images/bg-man-sitting.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sec6 .container .box .nbr {
+    color: rgb(242, 108, 79);
+    font-size: 55px;
+    margin: 0;
+}
+
+.sec6 .container .box .txt {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    letter-spacing: .3px;
+    margin: 0;
+}
+
+/* media query */
+
